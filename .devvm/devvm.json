@@ -6,11 +6,11 @@
         
     },
 
-		// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// Use 'forwardPorts' to make a list of ports inside the virtual machine available locally.
 	"forwardPorts": [5000, 5001]
 
 	
-	// Use 'postCreateCommand' to run commands after the container is created.
+	// Use 'postCreateCommand' to run commands after the virtual machine is created.
 	"postCreateCommand": "dotnet restore"
   
   "hibernateAfter": "20Mins" 
