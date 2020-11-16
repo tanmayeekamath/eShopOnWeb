@@ -1,17 +1,22 @@
 //Json file to specify custom configuration for the Codespace
 {
 	"name": "eShopOnWeb",
-   "build": {
-        "packerfile": "PackerFile",
         
-    },
-
-	// Use 'forwardPorts' to make a list of ports inside the virtual machine available locally.
-	"forwardPorts": [5000, 5001]
-
-	
+	//Build the virtual machine image using the specified configuration 
+	"packerfile": "PackerFile",
+        
+		
 	// Use 'postCreateCommand' to run commands after the virtual machine is created.
 	"postCreateCommand": "dotnet restore"
+	
+	// Add the IDs of extensions you want installed within VSCode when the VM is created
+         "extensions": [
+		"ms-vscode.azurecli"
+	],
+	
+	// Use 'forwardPorts' to make a list of ports inside the virtual machine available locally.
+	"forwardPorts": [5000, 5001]
   
-  "hibernateAfter": "20Mins" 
+        // Set default idle time after which the Codespace will be hibernated
+	"hibernateAfter": "20Mins" 
 }
