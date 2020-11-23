@@ -1,19 +1,17 @@
 //Json file to specify custom configuration for the Codespace
 {
-	"name": "eShopOnWeb",
+	"name": "KBCJavaApp",
         
-	//Build the virtual machine image using the specified configuration 
+	//Build the virtual machine image using the specified configuration
+	//With NetBeans, MySQL, JRE, mysql-connector-java-5.1.23-bin library
 	"packerfile": "PackerFile",
-        
+	
+	//Specify VM SKU for this configuration between Basic (4 core 16 GB RAM), Standard (8 core, 32 GB RAM), Premium (16 core, 64 GB RAM)
+	"size": "Standard"        
 		
 	// Use 'postCreateCommand' to run commands after the virtual machine is created.
-	"postCreateCommand": "dotnet restore"
-	
-	// Add the IDs of extensions you want installed within VSCode when the VM is created
-         "extensions": [
-		"ms-vscode.azurecli"
-	],
-	
+	"postCreateCommand": "dotnet restore"	
+		
 	// Use 'forwardPorts' to make a list of ports inside the virtual machine available locally.
 	"forwardPorts": [5000, 5001]
   
